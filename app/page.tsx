@@ -252,7 +252,12 @@ export default function AIPortfolio() {
                       <Github className="w-4 h-4 mr-2" />
                       GitHub
                     </Button>
-                    <Button variant="outline" size="sm">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => window.open('https://kr.linkedin.com/', '_blank')}
+                      className="cursor-pointer hover:border-2 hover:border-blue-500"
+                    >
                       <Linkedin className="w-4 h-4 mr-2" />
                       LinkedIn
                     </Button>
@@ -351,7 +356,7 @@ export default function AIPortfolio() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skillCategory, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <Card key={index} className="border-0 shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-lg flex items-center">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
@@ -389,7 +394,8 @@ export default function AIPortfolio() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+              className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent cursor-pointer hover:border-2 hover:border-blue-500"
+              onClick={() => window.open('https://kr.linkedin.com/', '_blank')}
             >
               <Linkedin className="w-5 h-5 mr-2" />
               LinkedIn 연결
